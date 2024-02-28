@@ -39,6 +39,15 @@ function candyAverage() {
 console.log(candyAverage());
 
 // Iteration 4: images for the first 10 `Ground`  Pokemons
+function getGroundPokeImg(arr) {
+  const groundType = pokemons.filter((pokemon) =>
+    pokemon.type.includes("Ground")
+  );
+  const imageGround = groundType.slice(0, 10).map((pokemon) => pokemon.image);
+  return imageGround;
+}
+
+console.log(getGroundPokeImg(pokemons));
 
 // Iteration 5: Find all pokemon names heavier than Pikachu
 
