@@ -68,7 +68,7 @@ console.log(getHeavyPokemons(pokemons));
 
 // Iteration 6: Alphabetic Order - Order by name and print the first 20 names
 
-function orderAlphabetically() {
+function orderAlphabetically(pokemons) {
   // get first 20 pokemons
   const firstTwenty = pokemons
     .slice(0, 20)
@@ -77,6 +77,17 @@ function orderAlphabetically() {
   return sortedNames;
 }
 
-console.log(orderAlphabetically());
+console.log(orderAlphabetically(pokemons));
 
 // Iteration 7: Strong pokemons - return an array of first 15 pokemons, that have just one `weakness`. If there are less that 15, return all of them
+function strongPokemons(pokemons) {
+    // get all pokemons with strngth greater than 0
+  const strongPokemon = pokemons.filter(
+    (pokemon) => pokemon.weaknesses.length === 1
+  );
+//   get the name of the strong pokemons
+  const strongNames = strongPokemon.slice(0, 15).map((pokemon) => pokemon.name);
+  return strongNames
+}
+
+console.log(strongPokemons(pokemons))
